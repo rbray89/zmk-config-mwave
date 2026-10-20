@@ -4,6 +4,12 @@ include:
     artifact-name: ansi-windows
     cmake-args: -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
   - board: mwave_33
+    artifact-name: ansi-windows-kvm
+    cmake-args: -DCONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_BASIC=y -DCONFIG_ZMK_STUDIO=n -DCONFIG_ZMK_HID_REPORT_TYPE_HKRO=y -DCONFIG_ZMK_POINTING=n -DCONFIG_ZMK_USB_BOOT=y
+  - board: mwave_33
+    artifact-name: ansi-windows-secure-kvm
+    cmake-args: -DCONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_BASIC=y -DCONFIG_ZMK_STUDIO=n -DCONFIG_ZMK_HID_REPORT_TYPE_HKRO=y -DCONFIG_ZMK_POINTING=n -DCONFIG_ZMK_USB_BOOT=y -DCONFIG_ZMK_HID_KEYBOARD_REPORT_SIZE=6 -DCONFIG_ZMK_BLE=n -DCONFIG_BT=n
+  - board: mwave_33
     snippet: studio-rpc-usb-uart
     artifact-name: ansi-mac
     cmake-args: -DKEYMAP_FILE=/tmp/zmk-config/config/mwave_33_mac.keymap -DCONFIG_ZMK_STUDIO=y -DCONFIG_ZMK_STUDIO_LOCKING=n
